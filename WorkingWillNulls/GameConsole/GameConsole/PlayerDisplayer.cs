@@ -53,7 +53,13 @@ namespace GameConsole
                 Console.WriteLine("Player is experinced");
             }
 
-            int days = player.DaysSinceLastLogin.GetValueOrDefault(defaultValue: -1);
+            // Manners to get value of a Nullable<T>
+            int days1 = player.DaysSinceLastLogin.GetValueOrDefault(-1);
+            int days2 = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1;
+            int days3 = player.DaysSinceLastLogin ?? -1;
+
+            // Checking if 'player' is null before access it (avaliable C#6)
+            int days4 = player?.DaysSinceLastLogin ?? -1; 
         }
     }
 }
