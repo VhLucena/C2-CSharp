@@ -12,7 +12,7 @@ namespace NullObjectPattern
         {
             var mobileRepository = new MobileRepository();
 
-            var mobile = mobileRepository.GetMobileByName("Galaxy");
+            var mobile = mobileRepository.GetMobileByName(MobileTypes.SamsungGalaxy);
 
             Console.WriteLine(mobile);
         }

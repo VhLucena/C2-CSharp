@@ -9,20 +9,19 @@ namespace NullObjectPattern
     class MobileRepository
     {
 
-        public IMobile GetMobileByName(string name)
+        public IMobile GetMobileByName(MobileTypes mobileName)
         {
             var nullMobile = NullObject.Instance;
-            string mobileName = name.ToLower();
 
             switch (mobileName)
             {
-                case "iphone":
+                case MobileTypes.AppleIphone:
                     return new Iphone();
 
-                case "galaxy":
+                case MobileTypes.SamsungGalaxy:
                     return new SamsungGalaxy();
 
-                case "nokia":
+                case MobileTypes.NokiaN97:
                     return new NokiaN97();
 
                 default:

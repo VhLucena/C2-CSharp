@@ -46,6 +46,7 @@
     <Compile Include="IMobile.cs" />
     <Compile Include="Iphone.cs" />
     <Compile Include="MobileRepository.cs" />
+    <Compile Include="MobileTypes.cs" />
     <Compile Include="NokiaN97.cs" />
     <Compile Include="NullObject.cs" />
     <Compile Include="Program.cs" />

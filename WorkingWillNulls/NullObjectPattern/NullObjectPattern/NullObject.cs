@@ -17,7 +17,7 @@ namespace NullObjectPattern
             get
             {
                 if ( _instance == null )
-                    return new NullObject();
+                    _instance = new NullObject();
                 return _instance;
             }
         }
